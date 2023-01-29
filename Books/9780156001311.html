@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+    body {
+        background-color: #5E503F;
+        text-align: center;
+        color: #EAE0D5;
+        font-weight: 300;
+
+    }
+
+    nav {
+        background-color: #5E503F;
+        padding: 15px 30px;
+        text-align: left;
+
+    }
+
+    #bookContainer {
+        background-color: #C6AC8F;
+        color: #22333B;
+        align-items: center;
+
+        display: flex;
+        padding: 20px 50px;
+        margin: 5% 8%;
+        border-radius: 20px;
+
+    }
+
+    #rightcol {
+        padding: 20px;
+        margin: 0 10px;
+        max-width: 50%;
+    }
+
+    #leftcol {
+        padding: 20px;
+        max-width: 65%;
+        text-align: left;
+
+    }
+
+    p {
+        padding: 20px 0px;
+        font-weight: 100;
+    }
+
+
+    #monthTitle {
+        padding: 30px 0;
+        font-weight: 200;
+    }
+
+    img {
+        width: 100%;
+        opacity: .9;
+    }
+
+    @media (max-width: 1200px) {
+        body {}
+
+        #bookContainer {
+            margin: 0;
+        }
+
+        #leftcol {
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        body {
+            background-color: #5E503F;
+        }
+
+        #leftcol {
+            max-width: 100%;
+        }
+
+        #bookContainer {
+            background-color: #22333B;
+            color: #EAE0D5;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 20px;
+
+        }
+
+        button {
+            margin-left: 40%;
+        }
+    }
+</style>
+
+<body onload="gen(9780156001311)">
+    <nav> <a href="../index.html">Home</a>
+    </nav>
+    <h1 id="monthTitle">Ethans Choice - Febuary 2023</h1>
+    <div id="bookContainer">
+        <div id="rightcol">
+
+        </div>
+        <div id="leftcol">
+            <h1 id="title"></h1>
+            <h2 id="subtitle"></h2>
+            <h5 id="year"></h5>
+            <p></p>
+
+            <a
+                href="https://drive.google.com/drive/folders/1uOehM4pBYTCs1Je-UpJfyyvGapCW3sxg?usp=share_link"><button>Download</button></a>
+
+        </div>
+    </div>
+    <footer>Prototype by Jayson</footer>
+
+
+
+    <script src="../app.js">
+
+
+
+    </script>
+</body>
+
+</html>
