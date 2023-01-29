@@ -35,7 +35,7 @@ const making = async (book, isbn) => {
     const bookAuthor = document.createElement("h5");
     const bookImg = document.createElement("img");
     const bookLink = document.createElement("a")
-    bookLink.href = `books/${isbn}.html`
+    bookLink.href = `${isbn}.html`
     // img original size 307x475
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("bookDiv");
