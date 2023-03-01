@@ -1,6 +1,6 @@
 
 const month = {
-    feb23: '9780156001311'
+    Febuary: '9780156001311', March: '9780140445466'
 }
 const monthKeys = Object.keys(month)
 
@@ -28,11 +28,14 @@ const gen = async function (isbn) {
 
 
 // }
-
+let i = 0;
 const making = async (book, isbn) => {
+
     const bookShelf = document.querySelector("#bookShelf");
     const bookTitle = document.createElement("h2");
     const bookAuthor = document.createElement("h5");
+    const bookMonthdiv = document.createElement("div")
+    const bookMonth = document.createElement("h1")
     const bookImg = document.createElement("img");
     const bookLink = document.createElement("a")
     bookLink.href = `${isbn}.html`
@@ -42,8 +45,11 @@ const making = async (book, isbn) => {
     bookLink.classList.add("img");
 
     bookImg.classList.add("main");
+    bookMonthdiv.classList.add("div");
+
 
     bookTitle.innerText = (book.title);
+    bookMonth.innerText = (monthKeys[i])
     bookAuthor.innerText = (`By: ${book.authors[0]}`);
     // bookDiv.style.backgroundImage = `url(https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg)`
     if (book.imageLinks.thumbnail === null) {
@@ -58,8 +64,9 @@ const making = async (book, isbn) => {
     bookDiv.addEventListener("mouseout", () => { bookImg.classList.toggle("hide") });
 
     bookDiv.append(bookImg, bookTitle, bookAuthor, bookLink);
-    bookShelf.append(bookDiv);
-
+    bookMonthdiv.append(bookMonth, bookDiv)
+    bookShelf.append(bookMonthdiv);
+    i++;
 }
 
 // for (const key in month) {
